@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styledejs.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <div class="container">
+    <input type="text" id="primer_nombre" onblur="validacion()" placeholder="escriba el primer nombre">
+    <input type="text" id="segundo_nombre" onblur="validacion()" placeholder="escriba el segundo nombre">
+    <input type="text" id="primer_apellido" onblur="validacion()" placeholder="escriba el primer apellido">
+    <input type="text" id="segundo_apellido" onblur="validacion()" placeholder="escriba el segundo apellido">
+    <button>Enviar</button>
+    <button>Eliminar</button>
+    </div>
+    <script>
+        let primer_nombre = document.getElementById("primer_nombre").value;
+        let segundo_nombre = document.getElementById("segundo_nombre").value;
+        let primer_apellido = document.getElementById("primer_apellido").value;
+        let segundo_apellido = document.getElementById("segundo_apellido").value;
+
+        if(primer_nombre <=5 && segundo_nombre <= 5 && primer_apellido <= 5 && segundo_apellido<= 5){
+            Swal.fire("el nombre esta incompleto");
+            document.getElementById("primer_nombre").style.border = "2px solid red"
+            document.getElementById("segundo_nombre").style.border = "2px solid red"
+            document.getElementById("primer_apellido").style.border = "2px solid red"
+            document.getElementById("segundo_apellido").style.border = "2px solid red"
+        }else{
+            
+        }
+    </script>
+
+</body>
+</html>
